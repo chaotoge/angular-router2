@@ -1,7 +1,7 @@
 /**
  * Created by @chaotoge on 2017/6/7.
  */
-import { Injectable } from '@angular/core';
+/*import { Injectable } from '@angular/core';
 
 import { Hero } from './hero';
 import { HEROES } from './mock-heroes';
@@ -19,4 +19,4 @@ export class HeroService {
       setTimeout(() => resolve(this.getHeroes()), 2000);
     });
   }
-}
+}*/

@@ -1,7 +1,7 @@
 /**
  * Created by @chaotoge on 2017/6/7.
  */
-import { Component, Input } from '@angular/core';
+/*import { Component, Input } from '@angular/core';
 import { Hero } from './hero';
 
 @Component({
@@ -21,4 +21,4 @@ import { Hero } from './hero';
 })
 export class HeroDetailComponent {
   @Input() hero: Hero;
-}
+}*/
