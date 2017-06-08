@@ -5,7 +5,7 @@ import { NgModule }              from '@angular/core';
 import { RouterModule, Routes }  from '@angular/router';
 
 import { CrisisListComponent }   from './crisis-list.component';
-import { HeroListComponent }     from './hero-list.component';
+import { HeroListComponent }     from './heroes/hero-list.component';
 import { PageNotFoundComponent } from './not-found.component';
 
 const appRoutes: Routes = [

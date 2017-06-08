@@ -1,7 +1,7 @@
 /**
  * Created by @chaotoge on 2017/6/7.
  */
-/*import { Hero } from './hero';
+import { Hero } from './hero';
 
 export const HEROES: Hero[] = [
   {id: 11, name: 'Mr. Nice'},
@@ -14,4 +14,4 @@ export const HEROES: Hero[] = [
   {id: 18, name: 'Dr IQ'},
   {id: 19, name: 'Magma'},
   {id: 20, name: 'Tornado'}
-];*/
+];

@@ -1,8 +1,11 @@
 /**
  * Created by @chaotoge on 2017/6/7.
  */
-/*import { Component, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Hero } from './hero';
+import { HeroService } from './hero.service';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'hero-detail',
@@ -20,5 +23,16 @@ import { Hero } from './hero';
   `
 })
 export class HeroDetailComponent {
-  @Input() hero: Hero;
-}*/
+  hero: Hero;
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private service: HeroService
+  ) {}
+  ngOnInit() {
+    this.route.params
+    // (+) converts string 'id' to a number
+      .switchMap((params: Params) => this.service.getHero(+params['id']))
+      .subscribe((hero: Hero) => this.hero = hero);
+  }
+}
