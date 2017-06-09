@@ -19,7 +19,11 @@ import 'rxjs/add/operator/switchMap';
         <label>name: </label>
         <input [(ngModel)]="hero.name" placeholder="name"/>
       </div>
+       <p>
+         <button (click)="gotoHeroes()">Back</button>
+       </p>
     </div>
+    
   `
 })
 export class HeroDetailComponent {
@@ -34,5 +38,13 @@ export class HeroDetailComponent {
     // (+) converts string 'id' to a number
       .switchMap((params: Params) => this.service.getHero(+params['id']))
       .subscribe((hero: Hero) => this.hero = hero);
+  }
+  gotoHeroes() {
+    //this.router.navigate(['/heroes']);
+    let heroId = this.hero ? this.hero.id : null;
+    // Pass along the hero id if available
+    // so that the HeroList component can select that hero.
+    // Include a junk 'foo' property for fun.
+    this.router.navigate(['/heroes', { id: heroId, foo: 'foo' }]);
   }
 }
